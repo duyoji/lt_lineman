@@ -1,0 +1,116 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Lineman.jsの紹介
+
+    // build:css styles/styles.css
+    //- Check out 'src/bower_components/prism/themes/' for available themes
+    link(rel='stylesheet', type='text/css', href='bower_components/prism/themes/prism-tomorrow.css')
+    link(rel='stylesheet', type='text/css', href='styles/main.css')
+    // endbuild
+
+  body
+
+    article
+
+      section
+        h2 Lineman.js<br/>良いよっていうお話
+
+      section
+        h2 今日するお話
+        ol
+          li linemanって何さ？
+          li altJS触ってみよう！
+          li Testコード書いてみよう！
+
+      section
+        h2 linemanって何さ？
+        h3 <a href="http://linemanjs.com/">Lineman.js</a>
+
+
+      section
+        h2 おおざっぱに言うと
+        ul
+          li <a href="http://yeoman.io/">Yeoman</a>をシンプルにしたもの。
+          li 「Yeoman」って何って人はRailsと似たものっていう認識で良いかと思います。(適当)
+          li Railsって何って人は
+          li 知りません
+
+      section
+        h2 インストールしておくもの
+        ul
+          li Node.js   (npmを使ってinstallするから)
+          li PhantomJS (CIテストで使うから)
+
+      section
+        h2 linemanの使い方
+        pre
+          code.language-javascript.
+            $ npm install -g lineman  # linemanをインストール
+            $ lineman new lineman_app # lineman_appっていうプロジェクトを作成
+            $ cd lineman_app          # 今作成したlinemanプロジェクトに移動
+            $ lineman run             # linemanの開発環境をサーバーで確認
+            $ lineman spec            # テストを実行
+            $ lineman spec-ci         # CIテスト(Travis CIとかと連携)
+
+      section
+        h2 altJS触ってみよう！
+
+
+      section
+        h2 coffeescript
+        ul
+          li デフォルトでcoffeescriptで開発出来る環境になっている。
+          li app/js内にcoffeescriptコードを書くとgenerated/jsにコンパイルされたコードが生成される。(アプリケーションコード)
+          li spec内に書いたコードもgenerated/jsにコンパイルされたコードが生成される。(テストコード)
+
+      section
+        h2 デモ
+
+
+
+      section
+        h2 typescript
+        ul
+          li coffeescriptと同じでapp/js, spec内に書いたtypescriptコードがgenerated/jsにコンパイルされたコードが生成される。
+          li コードをちょっといじったりライブラリを追加する必要がある。
+
+      section
+        h2 変更箇所
+        ul
+          li package.jsonにgrunt, grunt-typescriptをdevDependenciesに追加
+          li 任意の場所に<a href="https://raw.githubusercontent.com/duyoji/lineman-typescript-template/master/config/plugins/typescript.coffee">typescript.coffee</a>を追加
+
+      section
+        h2 デモ
+
+      section
+        h2 Testコード書いてみよう！
+
+      section
+        h2 デモ(coffeescript)
+
+      section
+        h2 デモ(typescript)
+
+      section
+        h2 サンプルコード
+        p <a href="https://bitbucket.org/Tsuyoshi/lineman_coffee_smv">https://bitbucket.org/Tsuyoshi/lineman_coffee_smv</a>(coffeescript)
+        p <a href="https://bitbucket.org/Tsuyoshi/lineman_typescript_smv">https://bitbucket.org/Tsuyoshi/lineman_typescript_smv</a>(typescript)
+
+
+    // build:js scripts/scripts.js
+    script(src='bower_components/bespoke.js/dist/bespoke.min.js')
+    script(src='bower_components/bespoke-keys/dist/bespoke-keys.min.js')
+    script(src='bower_components/bespoke-touch/dist/bespoke-touch.min.js')
+    script(src='bower_components/bespoke-bullets/dist/bespoke-bullets.min.js')
+    script(src='bower_components/bespoke-scale/dist/bespoke-scale.min.js')
+    script(src='bower_components/bespoke-hash/dist/bespoke-hash.min.js')
+    script(src='bower_components/bespoke-progress/dist/bespoke-progress.min.js')
+    script(src='bower_components/bespoke-state/dist/bespoke-state.min.js')
+    script(src='bower_components/bespoke-forms/dist/bespoke-forms.min.js')
+    script(src='bower_components/prism/prism.js')
+    script(src='scripts/main.js')
+    // endbuild
