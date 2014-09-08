@@ -1,5 +1,4 @@
-# Bespoke.jsを使ってみよう
-> A [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation, built with [generator-bespoke](https://github.com/markdalgleish/generator-bespoke)
+# Lineman.js良いよっていうお話
 
 ## View slides locally
 
